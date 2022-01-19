@@ -1,3 +1,9 @@
+'''
+Memory Usage:14.2 MB
+Rank:Lower than 77.27% submission
+'''
+
+
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         a=list(str(x))
