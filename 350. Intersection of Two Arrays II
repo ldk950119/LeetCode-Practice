@@ -1,0 +1,16 @@
+'''
+Runtime: 128 ms, faster than 5.09% of Python3 online submissions for Intersection of Two Arrays II.
+Memory Usage: 14.3 MB, less than 90.17% of Python3 online submissions for Intersection of Two Arrays II.
+'''
+
+
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        intersection=[]
+        if len(nums1)<len(nums2):
+            nums1,nums2=nums2,nums1
+        for i in range(0,len(nums2)):
+            if nums2[i] in nums1:
+                intersection.append(nums2[i])
+                nums1.remove(nums2[i])
+        return intersection
